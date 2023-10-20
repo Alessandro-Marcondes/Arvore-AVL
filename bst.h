@@ -8,36 +8,34 @@ struct node {
   link r;
   int item;
   int N;      // quantidade de nos na subarvore
-  int id;     // id da nÃ³
-  int height //altura de nos na subarvore
+  int id;     // id da nó
+  int height; // altura da arvore
 };
 
 typedef struct tree {
   link head; // raiz
-  link z;    // nÃ³ externo
+  link z;    // nó externo
 } * Tree;
 
-
-link novoNo(int item, link l, link r);
 Tree createTree();
-link rotR(Tree t, link h);
-link rotL(Tree t, link h);
-int height(link x);
-int size(link x);
-link insertR(Tree t, link h, link n);
-link insert(Tree t, int item);
-link searchR(Tree t, link h, int query);
-link search(Tree t, int query);
-void imprimeEmOrdem(Tree t, link h);
-void imprimePosOrdem(Tree t, link h);
-void imprimePreOrdem(Tree t, link h, int k);
-void printnode(char *x, int h);
-void imprimeR(Tree a, link t);
-void imprime(Tree a, char *s);
-void imprimeFromNode(Tree a, link h, char *s);
+
+int heigth(link x);
+int max(int a, int b);
+
+link rotR (Tree t, link h);
+
+link rotL (Tree t, link h);
+
+link search (Tree h, int query);
+
+link insert (Tree h, int item);
+
+void imprimeEmOrdem (Tree t, link h);
+void imprimePosOrdem (Tree t, link h);
+void imprimePreOrdem (Tree t, link h, int k);
+
 link AVLinsert (Tree t,link h, int item);
 
+void imprime(Tree a, char *s);
  
 #endif 
-
-
