@@ -119,7 +119,7 @@ link insert (Tree t, int item){
   }
   
   t->head = insertR(t, t->head, novoNo(item, t->z, t->z));
-  t->head->height = 1 + max(height(t->head->l), height(t->head->r)); // Atualize a altura da raiz.
+  t->head->height = 1 + max(height(t->head->l), height(t->head->r)); 
   
   return t->head;
 }
@@ -192,7 +192,4 @@ void imprimeFromNode(Tree a, link h, char *s) {
   printf("}\n");
 }
 
-link AVLinsertR (Tree t, link h, int item){
-  // Implemente o AVL insert, faça as modificações necessárias no código
-  return NULL;
-}
+
